@@ -37,7 +37,7 @@ cp -r ./html /var/www/html
 
 echo "IP: $IP" > /root/server-info.txt
 echo "SITE: http://$IP/" >> /root/server-info.txt
-echo "HTTP AUTH: admin / $IP" > /root/server-info.txt
+echo "HTTP AUTH: admin / $IP" >> /root/server-info.txt
 echo "MOUNT SSHFS: mkdir -p /mnt/remote/$IP && sshfs -o allow_other root@$IP:/ /mnt/remote/$IP" >> /root/server-info.txt
 echo "XDEBUG TUNNEL: ssh -R 9000:127.0.0.1:9999 root@$IP" >> /root/server-info.txt
 
