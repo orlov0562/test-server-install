@@ -1,3 +1,4 @@
 <h1>Index</h1>
-
-Hello world
+<div id="page-content">
+    Hello world!
+</div>

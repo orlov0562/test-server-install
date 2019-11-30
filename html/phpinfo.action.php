@@ -1,2 +1,4 @@
 <h1>PHP info</h1>
-<iframe src="phpinfo.php"></iframe>
+<div id="page-content">
+    <iframe src="phpinfo.php"></iframe>
+</div>
