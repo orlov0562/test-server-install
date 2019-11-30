@@ -27,7 +27,7 @@ systemctl restart php7.4-fpm
 cp ./nginx-default.conf /etc/nginx/sites-available/default
 nginx -s reload
 
-mkdir -p /opt/docker
+cp ./docker /opt/
 
 cp ./phpinfo.php /var/www/html/phpinfo.php
 
