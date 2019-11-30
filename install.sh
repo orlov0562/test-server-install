@@ -2,6 +2,8 @@
 
 IP=$(curl -s https://md5calc.com/ip.plain)
 
+export LC_ALL=en_US.UTF-8
+
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge" -y
 
