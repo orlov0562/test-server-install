@@ -21,3 +21,8 @@ apt-get install -y php7.4 php7.4-bcmath php7.4-bz2 php7.4-cli php7.4-common php7
 php7.4-imap php7.4-intl php7.4-json php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-pgsql php7.4-readline \
 php7.4-sqlite3 php7.4-tidy php7.4-xml php7.4-zip php-amqp php-apcu php-gearman php-geoip php-imagick php-memcache \
 php-mongodb php-oauth php-smbclient php-solr php-ssh2 php-uploadprogress php-uuid php-yaml php-xdebug
+
+cp nginx-default.conf /etc/nginx/sites-availbale/default
+nginx -s reload
+
+cp phpinfo.php /var/www/phpinfo.php
