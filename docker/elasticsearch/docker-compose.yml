@@ -10,6 +10,10 @@ services:
       - elasticsearch-volume:/usr/share/elasticsearch/data
     environment:
       - 'discovery.type=single-node'
+      - 'http.cors.enabled=true'
+      - 'http.cors.allow-origin=*'
+      - 'http.cors.allow-headers=X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization'
+      - 'http.cors.allow-credentials=true'
       - 'ES_JAVA_OPTS=-Xms512m -Xmx1024m'
     privileged: true
     hostname: elasticsearch
