@@ -24,3 +24,5 @@ cp ./nginx-default.conf /etc/nginx/sites-available/default
 nginx -s reload
 
 cp ./phpinfo.php /var/www/html/phpinfo.php
+
+echo "PHP info: http://$(curl -s https://md5calc.com/ip.plain)/phpinfo.php"
