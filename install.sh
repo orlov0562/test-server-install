@@ -9,7 +9,7 @@ sudo add-apt-repository ppa:ondrej/php -y
 apt-get update
 apt-get upgrade -y
 
-apt-get install -y htop tree pv mc git curl
+apt-get install -y htop tree pv mc git curl unzip
 
 apt-get install -y docker-ce docker-compose
 
