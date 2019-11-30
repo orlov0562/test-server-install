@@ -28,7 +28,10 @@
     <body>
         <div id="sidebar">
             <ul>
-                <?php foreach($actions as $action):?>
+                <li><a href="?action=index">Index</a></li>
+                <?php foreach($actions as $action):
+                    if ($action == 'index') continue;
+                ?>
                 <li><a href="?action=<?=$action?>"><?=ucfirst($action)?></a></li>
                 <?php endforeach;?>
             </ul>
