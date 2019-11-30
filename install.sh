@@ -1,5 +1,7 @@
 #!/bin/bash
 
+IP=$(curl -s https://md5calc.com/ip.plain)
+
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge" -y
 
@@ -9,7 +11,7 @@ sudo add-apt-repository ppa:ondrej/php -y
 apt-get update
 apt-get upgrade -y
 
-apt-get install -y htop tree pv mc git curl unzip
+apt-get install -y htop tree pv mc git curl unzip apache2-utils
 
 apt-get install -y docker-ce docker-compose
 
@@ -29,12 +31,13 @@ nginx -s reload
 
 cp -r ./docker /opt/
 
-cp ./phpinfo.php /var/www/html/phpinfo.php
-
-IP=$(curl -s https://md5calc.com/ip.plain)
+htpasswd -b -c /var/www/.htpasswd admin $IP
+rm -rf /var/www/html/*
+cp -r ./html /var/www/html
 
 echo "IP: $IP" > /root/server-info.txt
-echo "PHP info: http://$IP/phpinfo.php?info=$IP" >> /root/server-info.txt
+echo "SITE: http://$IP/" >> /root/server-info.txt
+echo "HTTP AUTH: admin / $IP" > /root/server-info.txt
 echo "MOUNT SSHFS: mkdir -p /mnt/remote/$IP && sshfs -o allow_other root@$IP:/ /mnt/remote/$IP" >> /root/server-info.txt
 echo "XDEBUG TUNNEL: ssh -R 9000:127.0.0.1:9999 root@$IP" >> /root/server-info.txt
 
