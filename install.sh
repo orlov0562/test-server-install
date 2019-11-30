@@ -7,6 +7,7 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:ondrej/php -y
+sudo add-apt-repository ppa:ondrej/pkg-gearman -y
 
 apt-get update
 apt-get upgrade -y
