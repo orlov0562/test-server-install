@@ -20,6 +20,9 @@ php7.4-imap php7.4-intl php7.4-json php7.4-mbstring php7.4-mysql php7.4-opcache 
 php7.4-sqlite3 php7.4-tidy php7.4-xml php7.4-zip php-amqp php-apcu php-gearman php-geoip php-imagick php-memcache \
 php-mongodb php-oauth php-smbclient php-solr php-ssh2 php-uploadprogress php-uuid php-yaml php-xdebug
 
+cp ./php-fpm-php.ini /etc/php/7.4/fpm/php.ini
+systemctl restart php7.4-fpm
+
 cp ./nginx-default.conf /etc/nginx/sites-available/default
 nginx -s reload
 
