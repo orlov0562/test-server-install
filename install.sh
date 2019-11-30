@@ -5,9 +5,9 @@ IP=$(curl -s https://md5calc.com/ip.plain)
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge" -y
 
-sudo apt-get install software-properties-common -y
-sudo add-apt-repository ppa:ondrej/php -y
-sudo add-apt-repository ppa:ondrej/pkg-gearman -y
+apt-get install software-properties-common -y
+add-apt-repository ppa:ondrej/php -y
+add-apt-repository ppa:ondrej/pkg-gearman -y
 
 apt-get update
 apt-get upgrade -y
