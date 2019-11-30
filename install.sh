@@ -23,6 +23,8 @@ php-mongodb php-oauth php-smbclient php-solr php-ssh2 php-uploadprogress php-uui
 cp ./nginx-default.conf /etc/nginx/sites-available/default
 nginx -s reload
 
+mkdir -p /opt/docker
+
 cp ./phpinfo.php /var/www/html/phpinfo.php
 echo "-----------------------------"
 IP=$(curl -s https://md5calc.com/ip.plain)
