@@ -11,7 +11,7 @@ sudo add-apt-repository ppa:ondrej/php
 apt-get update
 apt-get upgrade
 
-apt-get install -y htop tree pv mc
+apt-get install -y htop tree pv mc unzip
 
 apt-get install -y docker-ce
 
