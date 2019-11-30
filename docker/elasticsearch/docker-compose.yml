@@ -1,7 +1,7 @@
 version: '3'
 services:
   elasticsearch:
-    image: elastic/elasticsearch
+    image: elasticsearch:7.4.2
     restart: always
     ports:
       - "9200:9200"
