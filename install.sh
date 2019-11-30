@@ -33,7 +33,7 @@ cp -r ./docker /opt/
 
 htpasswd -b -c /var/www/.htpasswd admin $IP
 rm -rf /var/www/html/*
-cp -r ./html /var/www/html
+cp -r ./html/* /var/www/html/
 
 echo "IP: $IP" > /root/server-info.txt
 echo "SITE: http://$IP/" >> /root/server-info.txt
