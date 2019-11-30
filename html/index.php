@@ -29,7 +29,6 @@
                 <?php foreach($actions as $action):?>
                 <li><a href="?action=<?=$action?>">Index</a></li>
                 <?php endforeach;?>
-                <li><a href="phpinfo.php" target="_blank">PHP Info</a></li>
             </ul>
         </div>
         <div id="content">
