@@ -9,7 +9,7 @@ sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:ondrej/php -y
 
 apt-get update
-apt-get upgrade
+apt-get upgrade -y
 
 apt-get install -y htop tree pv mc git curl wget
 
