@@ -8,3 +8,8 @@ bsdtar --strip-components=1 -xvf test-server-install.zip && \
 bash install.sh && \
 rm -rf /tmp/test-server-install
 ```
+
+You can find instalation details and tips into /root/server-info.txt
+```
+cat /root/server-info.txt
+```
