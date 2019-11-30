@@ -23,4 +23,4 @@ php-mongodb php-oauth php-smbclient php-solr php-ssh2 php-uploadprogress php-uui
 cp ./nginx-default.conf /etc/nginx/sites-available/default
 nginx -s reload
 
-cp ./phpinfo.php /var/www/phpinfo.php
+cp ./phpinfo.php /var/www/html/phpinfo.php
