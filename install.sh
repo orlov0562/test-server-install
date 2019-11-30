@@ -33,4 +33,5 @@ echo "-----------------------------"
 IP=$(curl -s https://md5calc.com/ip.plain)
 echo "PHP info: http://$IP/phpinfo.php?info=$IP"
 echo "MOUNT SSHFS: mkdir -p /mnt/remote/$IP && sshfs -o allow_other root@$IP:/ /mnt/remote/$IP"
+echo "XDEBUG TUNNEL: ssh -R 9999:localhost:9000 root@$IP"
 echo "-----------------------------"
